@@ -1,20 +1,39 @@
 {
-  "name": "blog_box",
-  "version": "0.1.0",
-  "private": true,
+  "name": "hong_blog_box",
+  "version": "0.0.1",
+  "private": false,
+  "main": "./components/index.js",
+  "module": "index.mjs",
+  "types": "index.d.ts",
+  "files": [
+    "components/**/*.js",
+    "components/**/*.d.ts",
+    "components/**/*.mjs"
+  ],
+  "browser": "./browser/specific/main.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "prepare": "rm -rf components && mkdir components && tsc"
+  },
+  "peerDependencies": {
+    "next": ">=13.0.2",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   },
   "dependencies": {
     "@types/node": "20.10.2",
     "@types/react": "18.2.41",
     "@types/react-dom": "18.2.17",
-    "next": "14.0.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "autoprefixer": "^10.4.16",
+    "moment": "^2.29.4",
+    "next": ">=13.0.2",
+    "postcss": "^8.4.32",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
+    "react-router-dom": "^6.20.1",
+    "tailwindcss": "^3.3.5",
     "typescript": "5.3.2"
   }
 }
