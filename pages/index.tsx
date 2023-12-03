@@ -1,4 +1,4 @@
-import BlogBox from "@/components/BlogBox";
+import BlogBox from "../components/BlogBox";
 
 export default function Home() {
   interface blogType {

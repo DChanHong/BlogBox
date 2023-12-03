@@ -1,24 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": false,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "target": "es5", // 타입 스크립트 파일들을 어떤 버전의 자바스크립트로 바꿔줄지 정하는 부분
+    "lib": ["dom", "dom.iterable", "esnext"], //어떤 import 문법을 쓸건지 설정 'commonjs', 'amd' , 'es2015' , 'esnext'
+    "allowJs": true, // js 파일들을 ts에서 import해서 사용가능한지?
+    "skipLibCheck": true, // 선언 파일에서 라이브러리 검사를 건너뛸지 여부를 지정한다. 여기서는 건너뛰도록 설정
+    "strict": true, // 엄격 타입 검사
+    "forceConsistentCasingInFileNames": true, //파일 이름의 대소문자 일관성을 강제로 검사하는 옵션
+    "noEmit": false, // npm 배포를 하기 위해서 우리가 만든 컴포넌트 혹은 파일이 출력으로 나와야한다.
+    "esModuleInterop": true, // CommonJs 및 ES Module 형식 간의 상호 운용성을 향상시키기 위한 것으로 , 이를 통해 import 및 require문을 더 자유롭게 혼용할 수 있다.
+    "module": "esnext", //어떤 import 문법을 쓸건지 설정 'commonjs', 'amd' , 'es2015' , 'esnext'
+    "moduleResolution": "node", //모듈 해결 전략을 지정. "node"로 설정되어 있으며, Node.js의 모듈 해결 규칙을 따를 것을 의미
+    "resolveJsonModule": true, // JSON 파일을 모듈로 import할 수 있도록 햐주는 옵션
+    "isolatedModules": true, //파일 간의 모듈 간섭을 방지하기 위해 각 파일을 개별 모듈로 처리하는 옵션
     "jsx": "preserve",
     "incremental": true,
-    "declaration": true,
-    "outDir": "./components",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "declaration": true, // .d.ts 파일을 생성할 것인지에 대한 옵션 , 타입스크립트 지원을 위해서는 해당 옵션을 true로 지정해야한다.
+    "outDir": "./dist"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   // "include": ["next-env.d.ts", "./components/*.tsx", "./components/*.ts"],
