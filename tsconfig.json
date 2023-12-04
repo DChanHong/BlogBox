@@ -17,7 +17,5 @@
     "declaration": true, // .d.ts 파일을 생성할 것인지에 대한 옵션 , 타입스크립트 지원을 위해서는 해당 옵션을 true로 지정해야한다.
     "outDir": "./dist"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  // "include": ["next-env.d.ts", "./components/*.tsx", "./components/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["./components/*.ts", "./components/*.tsx"]
 }

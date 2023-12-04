@@ -1,4 +1,4 @@
-import BlogBox from "../components/BlogBox";
+import React from "react";
 
 export default function Home() {
   interface blogType {
@@ -19,9 +19,5 @@ export default function Home() {
     created_at: "2023-12-02T12:34:56.789Z",
   };
 
-  return (
-    <>
-      <BlogBox projectType="Next" blogData={data} />
-    </>
-  );
+  return <div>ss</div>;
 }
