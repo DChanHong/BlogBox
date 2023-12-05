@@ -22,8 +22,8 @@ const BlogBox = ({ projectType, blogData }: propsType) => {
 
   return (
     <LinkComponent
-      href={process.env.isNext ? `/${blogData.id}` : ""}
-      to={process.env.isNext ? "" : `/${blogData.id}`}
+      href={projectType === "Next" ? `/${blogData.id}` : ""}
+      to={projectType === "Next" ? "" : `/${blogData.id}`}
       className="w-full"
     >
       <div className="font-bold text-[1.8em] my-4">{blogData.title}</div>

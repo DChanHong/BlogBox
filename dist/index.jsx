@@ -5,7 +5,7 @@ import NextLink from "next/link";
 var BlogBox = function (_a) {
     var projectType = _a.projectType, blogData = _a.blogData;
     var LinkComponent = projectType === "Next" ? NextLink : ReactRouterLink;
-    return (<LinkComponent href={process.env.isNext ? "/".concat(blogData.id) : ""} to={process.env.isNext ? "" : "/".concat(blogData.id)} className="w-full">
+    return (<LinkComponent href={projectType === "Next" ? "/".concat(blogData.id) : ""} to={projectType === "Next" ? "" : "/".concat(blogData.id)} className="w-full">
       <div className="font-bold text-[1.8em] my-4">{blogData.title}</div>
       <div className="flex items-center pb-4">
         <p className="border-2 mr-6 w-[4rem] h-[4rem]">

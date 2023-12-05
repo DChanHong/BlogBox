@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5", // 타입 스크립트 파일들을 어떤 버전의 자바스크립트로 바꿔줄지 정하는 부분
-    "lib": ["dom", "dom.iterable", "esnext"], //어떤 import 문법을 쓸건지 설정 'commonjs', 'amd' , 'es2015' , 'esnext'
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], //어떤 import 문법을 쓸건지 설정 'commonjs', 'amd' , 'es2015' , 'esnext'
     "allowJs": true, // js 파일들을 ts에서 import해서 사용가능한지?
     "skipLibCheck": true, // 선언 파일에서 라이브러리 검사를 건너뛸지 여부를 지정한다. 여기서는 건너뛰도록 설정
     "strict": true, // 엄격 타입 검사
@@ -17,5 +21,11 @@
     "declaration": true, // .d.ts 파일을 생성할 것인지에 대한 옵션 , 타입스크립트 지원을 위해서는 해당 옵션을 true로 지정해야한다.
     "outDir": "./dist"
   },
-  "include": ["./components/*.ts", "./components/*.tsx"]
+  "include": [
+    "./components/lib/**/*.ts",
+    "./components/lib/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
